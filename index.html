@@ -37,13 +37,11 @@
       flex-direction: column;
       height: 100vh;
       box-sizing: border-box;
-      overflow-y: auto;
     }
     header {
       background-color: #4CAF50;
       padding: 20px;
       color: white;
-      flex-shrink: 0;
     }
     h1 {
       font-size: 3em;
@@ -61,8 +59,11 @@
       text-decoration: none;
       display: inline-block;
     }
-    section {
+    .content-scroll {
       flex-grow: 1;
+      overflow-y: auto;
+    }
+    section {
       padding: 20px;
       display: flex;
       flex-direction: column;
@@ -81,7 +82,6 @@
       background-color: #333;
       color: white;
       padding: 20px;
-      flex-shrink: 0;
     }
     footer a {
       color: #ffcc00;
@@ -105,20 +105,22 @@
       <a href="signup.html" class="button">Start Your Adventure</a>
     </header>
 
-    <section>
-      <div class="feature">
-        <h2>Interactive AI Conversations</h2>
-        <p>Talk with friendly characters to grow communication skills and explore new ideas.</p>
-      </div>
-      <div class="feature">
-        <h2>Fun Learning Adventures</h2>
-        <p>Solve puzzles, go on quests, and learn by doing!</p>
-      </div>
-      <div class="feature">
-        <h2>Earn Badges & Rewards</h2>
-        <p>Get excited to learn by unlocking achievements and collecting stars.</p>
-      </div>
-    </section>
+    <div class="content-scroll">
+      <section>
+        <div class="feature">
+          <h2>Interactive AI Conversations</h2>
+          <p>Talk with friendly characters to grow communication skills and explore new ideas.</p>
+        </div>
+        <div class="feature">
+          <h2>Fun Learning Adventures</h2>
+          <p>Solve puzzles, go on quests, and learn by doing!</p>
+        </div>
+        <div class="feature">
+          <h2>Earn Badges & Rewards</h2>
+          <p>Get excited to learn by unlocking achievements and collecting stars.</p>
+        </div>
+      </section>
+    </div>
 
     <footer>
       <a href="#">For Parents</a>
@@ -128,4 +130,3 @@
 
 </body>
 </html>
-
