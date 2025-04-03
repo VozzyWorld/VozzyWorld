@@ -1,135 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>VozzyWorld</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - VozzyWorld</title>
   <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-    }
     body {
       font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+      margin: 0;
       background: #f0faff;
       color: #333;
-      display: flex;
-      flex-direction: row;
-      overflow: hidden;
-    }
-    .left-image {
-      width: 40%;
-      padding: 20px;
+      text-align: center;
+      padding: 40px 20px;
       display: flex;
       flex-direction: column;
+      align-items: center;
       justify-content: space-between;
-      box-sizing: border-box;
-    }
-    .left-image img {
-      width: 100%;
-      height: 50%;
-      object-fit: cover;
-      border-radius: 12px;
-    }
-    .main-content {
-      width: 60%;
-      display: flex;
-      flex-direction: column;
       height: 100vh;
       box-sizing: border-box;
     }
-    header {
-      background-color: #4CAF50;
-      padding: 20px;
-      color: white;
-    }
     h1 {
-      font-size: 3em;
-      margin: 0;
+      color: #4CAF50;
     }
-    header p {
-      font-size: 1.5em;
+    input[type="text"], input[type="email"] {
+      padding: 10px;
+      font-size: 1em;
+      margin: 10px;
+      width: 80%;
+      max-width: 400px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .submit-btn {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 5px;
       margin-top: 10px;
     }
-    .button {
-      background-color: #ffcc00;
-      color: #000;
-      padding: 15px 30px;
-      font-size: 1.2em;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      margin-top: 15px;
-      text-decoration: none;
+    a {
       display: inline-block;
-    }
-    .content-scroll {
-      flex-grow: 1;
-      overflow-y: auto;
-    }
-    section {
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-    }
-    .feature {
-      margin-bottom: 30px;
-    }
-    .feature h2 {
-      font-size: 2em;
-    }
-    .feature p {
-      font-size: 1.25em;
-    }
-    footer {
-      background-color: #333;
-      color: white;
-      padding: 20px;
-    }
-    footer a {
-      color: #ffcc00;
-      margin: 0 15px;
+      margin-top: 20px;
       text-decoration: none;
+      color: #4CAF50;
       font-weight: bold;
     }
+    .signup-container {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .bottom-image {
+      width: 100%;
+      max-width: 800px;
+      margin-top: 20px;
+    }
+    .bottom-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+    #confirmation-message {
+      display: none;
+      color: #4CAF50;
+      font-size: 1.2em;
+      margin-top: 20px;
+    }
   </style>
+  <script>
+    function showConfirmationMessage() {
+      document.getElementById("confirmation-message").style.display = "block";
+    }
+  </script>
 </head>
 <body>
 
-  <div class="left-image">
-    <img src="Screen Shot 2025-03-26 at 3.11.12 AM.png" alt="VozzyWorld Logo">
-    <img src="World.png" alt="VozzyWorld Game Preview">
+  <div class="signup-container">
+    <h1>Welcome to VozzyWorld!</h1>
+    <p>Please enter your name and email to follow us as we continue to devlop VozzyWorld.</p>
+
+    <form action="https://script.google.com/macros/s/AKfycby3t0TMzAMa3qSRndgGLIagfBkOdE_8PfpQebFo442AJ2rq8gUMXv7OXkxbiJGw3Qx1/exec" method="POST" onsubmit="showConfirmationMessage()">
+      <input type="text" name="name" placeholder="Your Name" required><br>
+      <input type="email" name="email" placeholder="Your Email" required><br>
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+
+    <p id="confirmation-message">🎉 Thank you for signing up! Your adventure is about to begin.</p>
+
+    <a href="index.html">Back to Home</a>
   </div>
 
-  <div class="main-content">
-    <header>
-      <h1>VozzyWorld</h1>
-      <p>Learn. Talk. Grow. Let's start your adventure!</p>
-      <a href="signup.html" class="button">Start Your Adventure</a>
-    </header>
-
-    <div class="content-scroll">
-      <section>
-        <div class="feature">
-          <h2>Interactive AI Conversations</h2>
-          <p>Talk with friendly characters to grow communication skills and explore new ideas.</p>
-        </div>
-        <div class="feature">
-          <h2>Fun Learning Adventures</h2>
-          <p>Solve puzzles, go on quests, and learn by doing!</p>
-        </div>
-        <div class="feature">
-          <h2>Earn Badges & Rewards</h2>
-          <p>Get excited to learn by unlocking achievements and collecting stars.</p>
-        </div>
-      </section>
-    </div>
-
-    <footer>
-      <a href="#">For Parents</a>
-      <a href="#">For Teachers</a>
-    </footer>
+  <div class="bottom-image">
+    <img src="People.png" alt="VozzyWorld Characters">
   </div>
 
 </body>
