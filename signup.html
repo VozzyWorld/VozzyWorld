@@ -21,11 +21,15 @@
     }
     h1 {
       color: #4CAF50;
+      font-size: 2.8em;
+    }
+    p {
+      font-size: 1.4em;
     }
     input[type="text"], input[type="email"] {
-      padding: 10px;
-      font-size: 1em;
-      margin: 10px;
+      padding: 12px;
+      font-size: 1.2em;
+      margin: 12px;
       width: 80%;
       max-width: 400px;
       border: 1px solid #ccc;
@@ -35,18 +39,19 @@
       background-color: #4CAF50;
       color: white;
       border: none;
-      padding: 10px 20px;
-      font-size: 1em;
+      padding: 12px 24px;
+      font-size: 1.2em;
       cursor: pointer;
       border-radius: 5px;
-      margin-top: 10px;
+      margin-top: 12px;
     }
     a {
       display: inline-block;
-      margin-top: 20px;
+      margin-top: 24px;
       text-decoration: none;
       color: #4CAF50;
       font-weight: bold;
+      font-size: 1.1em;
     }
     .signup-container {
       flex-grow: 1;
@@ -67,7 +72,7 @@
     #confirmation-message {
       display: none;
       color: #4CAF50;
-      font-size: 1.2em;
+      font-size: 1.4em;
       margin-top: 20px;
     }
   </style>
@@ -81,7 +86,7 @@
 
   <div class="signup-container">
     <h1>Welcome to VozzyWorld!</h1>
-    <p>Please enter your name and email to follow us as we continue to devlop VozzyWorld.</p>
+    <p>Please enter your name and email to follow us as we continue to develop VozzyWorld.</p>
 
     <form action="https://script.google.com/macros/s/AKfycby3t0TMzAMa3qSRndgGLIagfBkOdE_8PfpQebFo442AJ2rq8gUMXv7OXkxbiJGw3Qx1/exec" method="POST" onsubmit="showConfirmationMessage()">
       <input type="text" name="name" placeholder="Your Name" required><br>
