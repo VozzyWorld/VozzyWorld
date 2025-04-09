@@ -132,5 +132,19 @@
     </footer>
   </div>
 
+  <!-- Visitor Tracking Script -->
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzySjpAqX1i1oH8XaFGK9L2P3AYOb9DTr4VzfN7-XD65nadUfzqssHzrV8UwK-CrHtegQ/exec';
+
+    fetch(scriptURL, {
+      method: 'POST',
+      mode: 'no-cors'
+    }).then(() => {
+      console.log('Visit logged to Google Sheet!');
+    }).catch(err => {
+      console.error('Error logging visit:', err);
+    });
+  </script>
+
 </body>
 </html>
