@@ -132,18 +132,17 @@
     </footer>
   </div>
 
-  <!-- Visitor Tracking Script -->
+  <!-- ✅ Visitor Tracking Script -->
   <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwbq7aRKFl303cKpsxr-xriypUoSJ7ENa5zOnug7BuOZ5_fYqtwOiD1Xwko3A2pNKSyMg/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzoQNF8tEp87cyYXRKZTuqmCcFTKYTYMuI47QsRJf5PVTmNWwImfc6NHn_3ltie24_u9Q/exec';
 
-    // Send visit log
     fetch(scriptURL, {
       method: 'POST',
       mode: 'no-cors'
     }).then(() => {
-      console.log('Visit logged to Google Sheet!');
+      console.log('✅ Visit logged to Google Sheet.');
     }).catch(err => {
-      console.error('Error logging visit:', err);
+      console.error('❌ Logging failed:', err);
     });
   </script>
 
